@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TouristAttractions>
+  <Attraction>
+    <PlaceID>ATT001</PlaceID>
+    <Name>Petronas Twin Towers</Name>
+    <City>Kuala Lumpur</City>
+    <State>Kuala Lumpur</State>
+    <Description>The Petronas Twin Towers are twin skyscrapers in Kuala Lumpur. At 451.9 meters, they were the tallest buildings in the world from 1998 to 2004.</Description>
+    <OpeningHours>
+      <Hours>9:00 AM - 9:00 PM</Hours>
+      <WeekendStatus>Closed</WeekendStatus>
+    </OpeningHours>
+    <Category>Urban Landmark</Category>
+    <Ticket>Yes</Ticket>
+    <Price>85.00</Price>
+    <Image>images/att001.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT002</PlaceID>
+    <Name>Batu Caves</Name>
+    <City>Gombak</City>
+    <State>Selangor</State>
+    <Description>Batu Caves is a limestone hill that has a series of caves and cave temples. It is one of the most popular Hindu shrines outside India.</Description>
+    <OpeningHours>
+      <Hours>24 Hours</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Religious</Category>
+    <Ticket>No</Ticket>
+    <Price>0.00</Price>
+    <Image>images/att002.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT003</PlaceID>
+    <Name>Langkawi Sky Bridge</Name>
+    <City>Langkawi</City>
+    <State>Kedah</State>
+    <Description>The Langkawi Sky Bridge is a 125-meter curved pedestrian cable-stayed bridge. It offers an incredible view of the Langkawi islands.</Description>
+    <OpeningHours>
+      <Hours>10:00 AM - 7:00 PM</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Adventure</Category>
+    <Ticket>Yes</Ticket>
+    <Price>55.00</Price>
+    <Image>images/att003.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT004</PlaceID>
+    <Name>Kinabalu Park</Name>
+    <City>Ranau</City>
+    <State>Sabah</State>
+    <Description>Kinabalu Park is Malaysia's first UNESCO World Heritage Site. It is home to Mount Kinabalu, the highest mountain in Malaysia.</Description>
+    <OpeningHours>
+      <Hours>7:00 AM - 5:00 PM</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Nature</Category>
+    <Ticket>Yes</Ticket>
+    <Price>15.00</Price>
+    <Image>images/att004.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT005</PlaceID>
+    <Name>A Famosa</Name>
+    <City>Melaka</City>
+    <State>Melaka</State>
+    <Description>A Famosa is a historical Portuguese fortress located in Melaka. It is among the oldest surviving European architectural remains in Southeast Asia.</Description>
+    <OpeningHours>
+      <Hours>9:00 AM - 5:30 PM</Hours>
+      <WeekendStatus>Closed</WeekendStatus>
+    </OpeningHours>
+    <Category>Historical</Category>
+    <Ticket>Yes</Ticket>
+    <Price>10.00</Price>
+    <Image>images/att005.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT006</PlaceID>
+    <Name>Penang Hill</Name>
+    <City>George Town</City>
+    <State>Penang</State>
+    <Description>Penang Hill is a hill resort comprising a group of peaks in Penang. It features the world's steepest tunnel track funicular railway.</Description>
+    <OpeningHours>
+      <Hours>6:30 AM - 11:00 PM</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Recreational</Category>
+    <Ticket>Yes</Ticket>
+    <Price>30.00</Price>
+    <Image>images/att006.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT007</PlaceID>
+    <Name>Sarawak Cultural Village</Name>
+    <City>Kuching</City>
+    <State>Sarawak</State>
+    <Description>Sarawak Cultural Village is a living museum that showcases the diverse cultural heritage of Sarawak's various ethnic groups.</Description>
+    <OpeningHours>
+      <Hours>9:00 AM - 4:30 PM</Hours>
+      <Hours>6:00 PM - 8:00 PM</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Cultural</Category>
+    <Ticket>Yes</Ticket>
+    <Price>60.00</Price>
+    <Image>images/att007.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT008</PlaceID>
+    <Name>National Museum</Name>
+    <City>Kuala Lumpur</City>
+    <State>Kuala Lumpur</State>
+    <Description>The National Museum is Malaysia's main museum. It displays the nation's historical, cultural and natural heritage through exhibitions and artifacts.</Description>
+    <OpeningHours>
+      <Hours>9:00 AM - 5:00 PM</Hours>
+      <WeekendStatus>Closed</WeekendStatus>
+    </OpeningHours>
+    <Category>Educational</Category>
+    <Ticket>Yes</Ticket>
+    <Price>5.00</Price>
+    <Image>images/att008.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT009</PlaceID>
+    <Name>Sunway Lagoon</Name>
+    <City>Petaling Jaya</City>
+    <State>Selangor</State>
+    <Description>Sunway Lagoon is a theme park with water rides, adventure rides, wildlife park, extreme park and more, providing fun for all ages.</Description>
+    <OpeningHours>
+      <Hours>10:00 AM - 6:00 PM</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Entertainment</Category>
+    <Ticket>Yes</Ticket>
+    <Price>150.00</Price>
+    <Image>images/att009.jpg</Image>
+  </Attraction>
+  
+  <Attraction>
+    <PlaceID>ATT010</PlaceID>
+    <Name>Taman Negara</Name>
+    <City>Kuala Tahan</City>
+    <State>Pahang</State>
+    <Description>Taman Negara is one of the oldest rainforests in the world, estimated to be over 130 million years old. It offers jungle trekking, wildlife watching, and canopy walks.</Description>
+    <OpeningHours>
+      <Hours>24 Hours</Hours>
+      <WeekendStatus>Open</WeekendStatus>
+    </OpeningHours>
+    <Category>Nature</Category>
+    <Ticket>Yes</Ticket>
+    <Price>20.00</Price>
+    <Image>images/att010.jpg</Image>
+  </Attraction>
+</TouristAttractions>
