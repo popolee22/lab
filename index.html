@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Attraction Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Malaysia Tourist Attractions Directory</h1>
+        <p class="subtitle">Discover the best destinations across Malaysia</p>
+    </header>
+    
+    <nav>
+        <div class="filter-container">
+            <div class="filter-section">
+                <label for="groupBy">Group By:</label>
+                <select id="groupBy">
+                    <option value="none">None</option>
+                    <option value="state">State</option>
+                    <option value="city">City</option>
+                    <option value="category">Category</option>
+                </select>
+            </div>
+            
+            <div class="filter-section" id="groupValueContainer" style="display: none;">
+                <label for="groupValue">Select:</label>
+                <select id="groupValue"></select>
+            </div>
+        </div>
+        
+        <div class="navigation-buttons">
+            <button id="prevBtn">Previous</button>
+            <button id="nextBtn">Next</button>
+            <button id="resetBtn">Show All</button>
+        </div>
+    </nav>
+    
+    <main>
+        <div id="attractionsList">
+            <!-- Attractions will be displayed here -->
+            <div class="loading">Loading attractions...</div>
+        </div>
+        
+        <div id="attractionDetails">
+            <!-- Selected attraction details will be displayed here -->
+        </div>
+    </main>
+    
+    <div class="image-preview-modal" id="imagePreviewModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-image" id="modalImage">
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>TMS6124 Web Authoring Lab Assignment - Tourist Attraction Directory</p>
+            <p class="copyright">© 2025 | All images are for educational purposes only</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
