@@ -301,3 +301,145 @@ function displayAttractionDetails(attraction) {
     // Scroll to details
     container.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Function to handle group by change
+function handleGroupByChange() {
+    const groupBy = document.getElementById('groupBy').value;
+    currentGrouping = groupBy;
+    
+    const groupValueContainer = document.getElementById('groupValueContainer');
+    const groupValueSelect = document.getElementById('groupValue');
+    
+    if (groupBy === 'none') {
+        groupValueContainer.style.display = 'none';
+        showAllAttractions();
+        return;
+    }
+    
+    // Get unique values for the selected grouping
+    const uniqueValues = [...new Set(attractions.map(attraction => {
+        if (groupBy === 'state') return attraction.state;
+        if (groupBy === 'city') return attraction.city;
+        if (groupBy === 'category') return attraction.category;
+    }))].sort();
+    
+    // Populate the group value select
+    groupValueSelect.innerHTML = '';
+    uniqueValues.forEach(value => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        groupValueSelect.appendChild(option);
+    });
+    
+    // Show the group value select
+    groupValueContainer.style.display = 'flex';
+    
+    // Filter attractions by the first value
+    if (uniqueValues.length > 0) {
+        currentGroupValue = uniqueValues[0];
+        groupValueSelect.value = currentGroupValue;
+        filterAttractionsByGroup();
+    }
+}
+
+// Function to handle group value change
+function handleGroupValueChange() {
+    currentGroupValue = document.getElementById('groupValue').value;
+    filterAttractionsByGroup();
+}
+
+// Function to filter attractions by group
+function filterAttractionsByGroup() {
+    if (currentGrouping === 'none') {
+        filteredAttractions = [...attractions];
+    } else {
+        filteredAttractions = attractions.filter(attraction => {
+            if (currentGrouping === 'state') return attraction.state === currentGroupValue;
+            if (currentGrouping === 'city') return attraction.city === currentGroupValue;
+            if (currentGrouping === 'category') return attraction.category === currentGroupValue;
+            return false;
+        });
+    }
+    
+    displayAllAttractions();
+}
+
+// Function to show previous attraction
+function showPreviousAttraction() {
+    if (currentGrouping !== 'none') {
+        // Handle previous in grouped view
+        const groupValues = [...new Set(attractions.map(attraction => {
+            if (currentGrouping === 'state') return attraction.state;
+            if (currentGrouping === 'city') return attraction.city;
+            if (currentGrouping === 'category') return attraction.category;
+        }))].sort();
+        
+        const currentGroupIndex = groupValues.indexOf(currentGroupValue);
+        if (currentGroupIndex > 0) {
+            currentGroupValue = groupValues[currentGroupIndex - 1];
+            document.getElementById('groupValue').value = currentGroupValue;
+            filterAttractionsByGroup();
+        }
+    } else {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateNavigationButtons();
+    }
+}
+
+// Function to show next attraction
+function showNextAttraction() {
+    if (currentGrouping !== 'none') {
+        // Handle next in grouped view
+        const groupValues = [...new Set(attractions.map(attraction => {
+            if (currentGrouping === 'state') return attraction.state;
+            if (currentGrouping === 'city') return attraction.city;
+            if (currentGrouping === 'category') return attraction.category;
+        }))].sort();
+        
+        const currentGroupIndex = groupValues.indexOf(currentGroupValue);
+        if (currentGroupIndex < groupValues.length - 1) {
+            currentGroupValue = groupValues[currentGroupIndex + 1];
+            document.getElementById('groupValue').value = currentGroupValue;
+            filterAttractionsByGroup();
+        }
+    } else {
+        currentIndex = Math.min(currentIndex + 1, filteredAttractions.length - 1);
+        updateNavigationButtons();
+    }
+}
+
+// Function to update navigation buttons
+function updateNavigationButtons() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    if (currentGrouping !== 'none') {
+        // Handle button state for grouped view
+        const groupValues = [...new Set(attractions.map(attraction => {
+            if (currentGrouping === 'state') return attraction.state;
+            if (currentGrouping === 'city') return attraction.city;
+            if (currentGrouping === 'category') return attraction.category;
+        }))].sort();
+        
+        const currentGroupIndex = groupValues.indexOf(currentGroupValue);
+        prevBtn.disabled = currentGroupIndex === 0;
+        nextBtn.disabled = currentGroupIndex >= groupValues.length - 1;
+    } else {
+        // Handle button state for individual view
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= filteredAttractions.length - 1;
+    }
+}
+
+// Function to show all attractions
+function showAllAttractions() {
+    currentGrouping = 'none';
+    document.getElementById('groupBy').value = 'none';
+    document.getElementById('groupValueContainer').style.display = 'none';
+    
+    filteredAttractions = [...attractions];
+    currentIndex = 0;
+    
+    displayAllAttractions();
+}
